@@ -1,0 +1,35 @@
+<md-content layout-fill>
+    <md-list ng-hide="$ctrl.rules.length == 0">
+        <md-list-item layout layout-align="start stretch" layout-margin
+            ng-repeat="rule in $ctrl.rules track by $index">
+            <md-input-container flex>
+                <input type="number" placeholder="Inbound Port" aria-label="Source Port"
+                    ng-model="rule.in.port">
+            </md-input-container>
+            <md-input-container flex="30">
+                <input type="text" placeholder="Outbound IP Address" aria-label="IP Address"
+                    ng-model="rule.out.address">
+            </md-input-container>
+            <md-input-container flex>
+                <input type="number" placeholder="Outbound Port" aria-label="Destination Port"
+                    ng-model="rule.out.port">
+            </md-input-container>
+            <md-button class="md-icon-button" ng-click="$ctrl.delRow($index)">
+                <md-icon>clear</md-icon>
+            </md-button>
+        </md-list-item>
+    </md-list>
+    <div layout="column" layout-align="center center" layout-margin layout-fill
+        ng-if="$ctrl.rules.length == 0">
+        <h3 class="md-title">Create forwarding rules to begin</h3>
+        <p class="md-body-1">Press on the '+' button at the bottom right corner to create a forwarding rule.</p>
+    </div>
+</md-content>
+<div style="position:fixed; bottom:0; right:0;" layout="column" layout-align="center center" layout-padding>
+    <md-button class="md-fab md-primary md-hue-1" aria-label="Refresh Rules" ng-click="$ctrl.refresh()">
+        <md-icon>refresh</md-icon>
+    </md-button>
+    <md-button class="md-fab md-primary" aria-label="Add Rule" ng-click="$ctrl.addRow()">
+        <md-icon>add</md-icon>
+    </md-button>
+</div>

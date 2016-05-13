@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="port-forwarder">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <title>Port Forwarder</title>
+
+    <link rel="stylesheet" href="../vendor/angular/angular-csp.css">
+    <link rel="stylesheet" href="../vendor/material-icons.css">
+    <link rel="stylesheet" href="../vendor/angular-material/angular-material.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body layout="row" layout-align="center center" layout-wrap ng-cloak>
+
+    <md-content class="md-whiteframe-2dp" style="margin:4px 0 -4px 0; height:100%;"
+        flex="100" flex-gt-xs="75" flex-gt-md="50">
+        <forwarder></forwarder>
+    </md-content>
+
+    <script src="../vendor/angular/angular.js"></script>
+    <script src="../vendor/angular-animate/angular-animate.js"></script>
+    <script src="../vendor/angular-aria/angular-aria.js"></script>
+    <script src="../vendor/angular-material/angular-material.js"></script>
+    <script src="electronipc/electronipc.js"></script>
+    <script src="components/forwarder/forwarder-factory.js"></script>
+    <script src="components/forwarder/forwarder.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

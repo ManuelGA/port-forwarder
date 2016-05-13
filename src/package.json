@@ -1,0 +1,25 @@
+{
+  "name": "portforwarder",
+  "version": "0.0.1",
+  "description": "Forwards TCP ports to designated addresses and ports.",
+  "main": "app/main.js",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "electron-prebuilt": "^0.37.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node_modules/electron-prebuilt/dist/electron .",
+    "install": "node_modules/bower/bin/bower install"
+  },
+  "contributors": [
+    "Frederick Tsang <ftsang92@gmail.com>",
+    "Manuel Gonzales <manuel-gonzales@outlook.com>"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:ftsang/COMP8005_-_Final_Project.git"
+  }
+}
